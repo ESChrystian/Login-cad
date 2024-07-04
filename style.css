@@ -1,0 +1,54 @@
+/* Personalizações gerais */
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.container {
+    border: 1px solid black;
+    width: 50vh;
+    padding: 30px;
+    border-radius: 20px;
+  
+}
+form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+table {
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    color:rgb(121, 119, 119);
+    transition: 0.5s ease;
+}
+
+#link:hover #line {
+    width: 1px;
+}
+
+#link {
+    width: 45px;
+    
+}
+
+#line {
+    background-color: black;
+    height: 1px;
+    width: 45px;
+    transition: 0.5s ease;
+}
+
+.form-control {
+    border: none;
+    border-bottom: 1px solid;
+    border-radius: 0px;
+   
+}
