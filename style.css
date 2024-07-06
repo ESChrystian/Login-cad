@@ -4,17 +4,23 @@ body{
     display: flex;
     align-items: center;
 }
-.container {
-    border: 1px solid black;
-    width: 50vh;
-    padding: 30px;
-    border-radius: 20px;
-  
-}
+
+
+
 form {
     display: flex;
     flex-direction: column;
+    height:90vh;
+   
+}
 
+#formLogin {
+    border: 1px solid black;
+    width: 60vh;
+    height: 60vh;
+    padding: 30px;
+    border-radius: 20px;
+    align-content: center;
 }
 
 table {
@@ -25,8 +31,9 @@ a {
     text-decoration: none;
     color: black;
 }
+
 a:hover {
-    color:rgb(121, 119, 119);
+    color: rgb(121, 119, 119);
     transition: 0.5s ease;
 }
 
@@ -36,7 +43,7 @@ a:hover {
 
 #link {
     width: 45px;
-    
+
 }
 
 #line {
@@ -50,5 +57,28 @@ a:hover {
     border: none;
     border-bottom: 1px solid;
     border-radius: 0px;
+
+}
+#span {
+    text-align: center;
+    position: relative;
+    margin-top: 20px;
+   display: flex;
    
+}
+p {
+    flex-basis: 200px;
+}
+
+
+  
+
+@media (max-width: 999px) {
+        .container {
+            border: 1px solid black;
+            width: 60vh;
+            margin-left: 20px;
+            border-radius: 20px;
+        }
+
 }
