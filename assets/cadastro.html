@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Login e Cadastro de Usuários</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- Bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Box Icons link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Css link-->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- FORMULÁRIO DE LOGIN ----------------------------------------------------------------------------->
+    <div class="container col-4" id="formLogin">
+        <h1>login</h1>
+
+        <hr>
+        <form action="" class="form">
+            <!-- Campo de onde informa-se o Email -->
+            <input type="text" name="" id="loginEmail" class="form-control" placeholder="Informe seu Email">
+            <br>
+            <!-- Campo onde se informa a senha do Email -->
+            <input type="password" name="" id="loginSenha" class="form-control" placeholder="Informe sua senha">
+            <!-- Aviso de preenchimento incorreto -->
+            <div id="span"></div>
+            <br>
+            <!-- Botão de envio -->
+            <button type="button" class="btn btn-info" onclick="acessar()">ACESSAR</button>
+            <br>
+
+        </form>
+    </div>
+    <!-- FORMULÁRIO DE CADASTRO ----------------------------------------------------------------------------->
+    <div class="view" id="formCad">
+        <div class="left">
+            <h1>Cadastrar-se</h1>
+
+            <!-- FORMULÁRIO DE CADASTRO -->
+            <div class="container col-4" id="formCadastro">
+
+                <form action="">
+                    <hr>
+                    <input type="text" name="" id="nomeUser" class="form-control" placeholder="Nome"
+                        maxlength="30"><!-- Campo de inserimento do nome-->
+                    <i class='bx bxs-user-check'></i>
+
+                    <div id="alert"></div>
+                    <!-- Campo que recebe mensagem de alerta caso o input não seja preenchido-->
+
+                    <button type="button" class="btn btn-info" onclick="salvarUser()">Enviar</button>
+                    <!--Botão de envio -->
+                </form>
+            </div>
+
+
+        </div>
+        <!-- Div que contém valores cadastrados -->
+        <div class="right">
+
+            <h6 id="text">Seu cadastro aparecerá aqui...</h6>
+
+            <!-- TABELA DE VISUALIZAÇÃO DOS CADASTRADOS -->
+            <table class="table table-striped" id="tabela"></table>
+
+        </div>
+    </div>
+
+
+    <!-- Link JS -->
+    <script src='js/controller.js'></script>
+</body>
+
+</html>
