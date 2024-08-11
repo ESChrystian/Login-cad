@@ -5,13 +5,14 @@ function acessar() { // CRIA UMA FUNÇÃO  QUE VALIDA O QUE FOI ESCRITO NOS CAMP
 
 
     if (!loginEmail || !loginSenha) {
-        alert("Favor preencher todos os campos"); // Mostra Pop-up caso usuário não preencha corretamente os campos de Login.
-    } else {
+       // Mostra mensagem dentro da div 'span" caso usuário não preencha corretamente os campos de Login.
+        document.getElementById("span").innerHTML = "Favor preencher todos os campos";
+    }else {
         // Após a validação do login, os formulários se movem...
         // Formulário de Login
-        let login = document.getElementById("formLogin"); 
+        let login = document.getElementById("formLogin");
         // Formulário de cadastro
-        let cadastro = document.getElementById("formCad"); 
+        let cadastro = document.getElementById("formCad");
         login.style.top = "-500px"; //1° etapa: formulário de Login sai da tela
         cadastro.style.left = "0" //2° etapa: formulário de cadastro se move ao centro da tela
 
@@ -55,7 +56,7 @@ function salvarUser() {
 function criaLista() {
     let tabelaDesign = document.getElementById("tabela"); //Variável para personalização da tabela
     // Estrutura da tabela que receberá dados dos usuários
-    let tabela = document.getElementById("tabela").innerHTML = "<tr><th>Nome Usuário</th><th>Ações</th></tr>"; 
+    let tabela = document.getElementById("tabela").innerHTML = "<tr><th>Nome Usuário</th><th>Ações</th></tr>";
     for (let i = 0; i <= (dadosLista.length - 1); i++) {
         tabelaDesign.style.backgroundColor = "#ffff";
         tabela += "<tr><td>" + dadosLista[i] + "</td><td><button type='button' onclick='editar(parentNode.parentNode.rowIndex)'>Editar</button><button type='button' onclick='excluir(parentNode.parentNode.rowIndex)'>Excluir</button></td></tr>";
@@ -67,14 +68,14 @@ function criaLista() {
 
 // FUNÇÃO PARA EDITAR NOMES DE LISTA
 function editar(i) {
-    document.getElementsByClassName('right')
+
     document.getElementById("nomeUser").value = dadosLista[(i - 1)]; dadosLista.splice(dadosLista[(i - 1)], 1);
     alert.innerHTML = "";
 
 }
 
 // FUNÇÃO QUE EXCLUI NOME DA LISTA
-function excluir(i) { 
+function excluir(i) {
     dadosLista.splice((i - 1), 1);
     document.getElementById('tabela').deleteRow(i);
 }
