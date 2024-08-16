@@ -79,6 +79,13 @@ th {
     outline: none;
     border: none;
 }
+#emailUser {
+    cursor: pointer;
+    width: 15rem;
+    margin-top: 10px;
+    outline: none;
+    border: none;
+}
 
 /* Formulario de inserimento */
 form {
@@ -98,9 +105,9 @@ form>button {
 
 /* Posiciona e personaliza icon */
 form>i {
-    position: absolute;
-    left: 35%;
-    top: 51%;
+    position: relative;
+    left: 100px;
+    top: -32px;
     font-size: 30px;
     overflow: hidden;
     pointer-events: none;
