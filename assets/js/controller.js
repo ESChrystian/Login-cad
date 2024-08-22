@@ -12,7 +12,8 @@ function acessar() { // CRIA UMA FUNÇÃO  QUE VALIDA O QUE FOI ESCRITO NOS CAMP
     } else {
         // Após a validação do login, os formulários se movem...
         let login = document.getElementById("formLogin");// Formulário de Login
-        let cadastro = document.getElementById("formCad"); // Formulário de cadastro
+        let cadastro = docu
+        ment.getElementById("formCad"); // Formulário de cadastro
 
         login.style.top = "-500px"; //1° etapa: formulário de Login sai da tela
         cadastro.style.left = "0" //2° etapa: formulário de cadastro se move ao centro da tela
