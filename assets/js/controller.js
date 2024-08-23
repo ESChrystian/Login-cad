@@ -12,8 +12,7 @@ function acessar() { // CRIA UMA FUNÇÃO  QUE VALIDA O QUE FOI ESCRITO NOS CAMP
     } else {
         // Após a validação do login, os formulários se movem...
         let login = document.getElementById("formLogin");// Formulário de Login
-        let cadastro = docu
-        ment.getElementById("formCad"); // Formulário de cadastro
+        let cadastro = document.getElementById("formCad"); // Formulário de cadastro
 
         login.style.top = "-500px"; //1° etapa: formulário de Login sai da tela
         cadastro.style.left = "0" //2° etapa: formulário de cadastro se move ao centro da tela
@@ -75,17 +74,18 @@ function criaLista() {
 // FUNÇÃO PARA EDITAR NOMES DE LISTA
 function editar(i) {
 
-    document.getElementById("nomeUser").value = dadosLista[(i - 1)]; dadosLista.splice(dadosLista[(i - 1)], 1);
-    document.getElementById("emailUser").value = emaillista[(i - 1)]; emaillista.splice(dadosLista[(i - 1)], 1);
+    document.getElementById("nomeUser").value = userLista[(i - 1)]; userLista.splice(userLista[(i - 1)], 1);
+    document.getElementById("emailUser").value = emaillista[(i - 1)]; emaillista.splice(emaillista[(i - 1)], 1);
     alert.innerHTML = "";
 
 }
 
 // FUNÇÃO QUE EXCLUI NOME DA LISTA
 function excluir(i) {
-    dadosLista.splice((i - 1), 1);
+    userLista.splice((i - 1), 1);
     emaillista.splice((i - 1), 1);
     document.getElementById('tabela').deleteRow(i);
+    
 }
 
 //deleteRow = deletar linha
