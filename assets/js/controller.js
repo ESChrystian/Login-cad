@@ -16,7 +16,7 @@ function acessar() { // CRIA UMA FUNÇÃO  QUE VALIDA O QUE FOI ESCRITO NOS CAMP
 
         login.style.top = "-500px"; //1° etapa: formulário de Login sai da tela
         cadastro.style.left = "0" //2° etapa: formulário de cadastro se move ao centro da tela
-
+ 
     }
 }
 
