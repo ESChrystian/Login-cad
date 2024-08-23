@@ -16,7 +16,7 @@ function acessar() { // CRIA UMA FUNÇÃO  QUE VALIDA O QUE FOI ESCRITO NOS CAMP
 
         login.style.top = "-500px"; //1° etapa: formulário de Login sai da tela
         cadastro.style.left = "0" //2° etapa: formulário de cadastro se move ao centro da tela
- 
+
     }
 }
 
@@ -42,7 +42,16 @@ function salvarUser() {
         h6.style.display = "none";
 
 
-    } else {
+    } else if(emailUser){
+        userLista.push(nomeUser); // Adiciona valor ao array
+        emaillista.push(emailUser);
+        criaLista(); // Inicia a funcão cria lista
+        document.getElementById("nomeUser").value = ""; // Após envio do campo de Login, o input fica vazio
+        document.getElementById("emailUser").value = ""; // Após envio do campo de Login, o input fica vazio
+        alert.innerHTML = ""; //Div onde fica mensagem de aviso fica vazia
+        h6.style.display = "none";
+    }
+        else {
         // alert("Favor informar o nome para cadastro"); // Caso o usuário não preencha o campo ele aparecera um Pop-up para preenchimento completo do cadastro.
         alert.style.color = "red";
         alert.innerHTML = "Preencha o formulário de cadastro";
